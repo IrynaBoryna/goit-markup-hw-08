@@ -2,11 +2,8 @@
     background-color: #F5F4FA;
 }
 .team {
-
-    display: flex;
-    flex-basis: calc((100% - 3*30px)/4);
-    gap: 30px;
-
+    display: block;
+  
     &--list {
     padding-left: 0;
         margin: 0;
@@ -33,6 +30,17 @@
              line-height: 1.19;
          }
 
+ @media screen and (min-width: 768px) {
+     display: flex;
+     flex-wrap: wrap;;
+     gap: 30px;
+ }
+
+    @media screen and (min-width: 1200px) {
+display: flex;
+flex-basis: calc((100% - 3*30px)/4);
+gap: 30px;
+}
 }
 
 

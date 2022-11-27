@@ -41,7 +41,7 @@
 
 }
 
-.close-button {
+.modal__close-button {
     position: absolute;
     top: 10px;
     right: 10px;
@@ -74,7 +74,7 @@
     fill: currentColor;
 }
 
-.modal-title {
+.modal__title {
     margin-bottom: 12px;
     text-align: center;
     font-size: 20px;
@@ -86,24 +86,24 @@
 .form {
     margin: 0 auto;
 
-    &-link  {
+    &--link  {
             color: $accent-color;
             text-decoration: underline;
         }
     }
         
-.form-field {
+.form__field {
     position: relative;
     display: flex;
     flex-direction: column-reverse;
     margin-bottom: 10px;
 
 
-    &.comment {
+    &--comment {
             margin-bottom: 20px;
         }
     
-    &.polisy {
+    &--polisy {
             margin-bottom: 30px;
         }
     
@@ -114,7 +114,7 @@
 }
 
 
-.form-input {
+.form__input {
     position: relative;
     display: block;
     height: 40px;
@@ -137,7 +137,7 @@
           }
 }
 
-.form-input.comment {
+.form__input--comment {
     resize: none;
     height: 120px;
     padding: 12px 16px;
@@ -155,7 +155,7 @@
 }
 
 
-.button.check {
+.button--check {
     display: block;
     min-width: 200px;
     height: 50px;
@@ -163,7 +163,7 @@
     border: none;
 }
 
-.check-icon {
+.form__check-icon {
     display: inline-block;
     width: 16px;
     height: 15px;
@@ -175,23 +175,30 @@
 
 }
 
-.label.polisy {
+.form__label--polisy {
     display: flex;
     justify-content: center;
     gap: 5px;
 }
 
 
-.checkbox {
+.form__checkbox {
     appearance: none;
     position: absolute;
 
-  &:checked+.check-icon {
-        background-color: $accent-color;
-        background-size: contain;
-        background-origin: border-box;
-        border-color: transparent;
-        background-image: url("../images/icon-check.svg");
-    }
+//   &:checked+.form__check-icon {
+//         background-color: $accent-color;
+//         background-size: contain;
+//         background-origin: border-box;
+//         border-color: transparent;
+//         background-image: url("../images/icon-check.svg");
+//     }
 
 }
+ .form__checkbox:checked+.form__check-icon {
+     background-color: $accent-color;
+     background-size: contain;
+     background-origin: border-box;
+     border-color: transparent;
+     background-image: url("../images/icon-check.svg");
+ }

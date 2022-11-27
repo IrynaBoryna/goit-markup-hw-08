@@ -1,19 +1,22 @@
-.container.nav {
+.container__nav {
     display: flex;
     align-items: center;
-
 
 }
 nav {
     margin-left: 93px;
 }
 
-.site-nav.list {
+.site-nav--list {
     display: flex;
+    padding-left: 0;
+        margin: 0;
+        list-style: none;
+
 
 }
 
-.site-nav .item {
+.site-nav__item {
     margin-right: 50px;
     padding-top: 32px;
     padding-bottom: 32px;
@@ -24,9 +27,10 @@ nav {
 }
 
 
-.site-nav .link {
+.site-nav__link {
     color: $title-text-color;
     position: relative;
+    text-decoration: none;
 
     font-weight: 500;
     line-height: 1.14;
@@ -47,7 +51,7 @@ nav {
 }
 
 
-.site-nav .link.current::after {
+.site-nav__link--current::after {
     content: "";
     display: block;
     position: absolute;
@@ -59,23 +63,30 @@ nav {
     background-color: $accent-color;
 }
 
-.site-nav .current {
+.site-nav__link--current {
     color: $accent-color;
 
 }
+.auth-nav--list {
+    padding-left: 0;
+    margin: 0;
+    list-style: none;
+}
 
-.auth.nav {
+.auth-nav {
     display: flex;
     justify-content: flex-end;
     margin-left: auto;
 
-    & .item+.item {
+
+    
+    &__item+&__item {
             margin-left: 40px;
         }
 }
 
 
-.item {
+.site-nav__item {
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -87,7 +98,8 @@ nav {
 }
 
 
-.item-link {
+.auth-nav__link {
+   
     display: flex;
     color: $primare-text-color;
     font-weight: 500;
