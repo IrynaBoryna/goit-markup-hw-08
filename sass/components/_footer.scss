@@ -2,12 +2,17 @@
     padding: 60px 0;
     background-color: #2f303a;
 
-    &__container {
+    display: block;
+    text-align: center;
+
+        @media  screen and (min-width: 1200px) {
+        
+        &__container {
             display: flex;
             align-items: baseline;
-    
+            gap: 94px;
         }
-
+    }
 }
 
 
@@ -17,10 +22,7 @@
     text-decoration: none;
     font-style: normal;
     transition: $colorTransition;
-    // transition-property: color;
-    // transition-duration: 250ms;
-    // transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-
+    
 &:hover,
     &:focus {
     color: $accent-color;
@@ -28,14 +30,13 @@
 }
 
 .footer-link {
+
     color: rgba(255, 255, 255, 0.6);
     line-height: 1.71;
     text-decoration: none;
     font-style: normal;
     transition: $colorTransition;
-    // transition-property: color;
-    // transition-duration: 250ms;
-    // transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    
     
 
 &:hover,
@@ -74,8 +75,12 @@
     width: auto;
     padding: 0;
     margin: 0;
-    margin-top: 20px;
-    text-align: left;
+    margin-top: 28px;
+    text-align: center;
+
+    @media  screen and (min-width: 1200px) {
+        text-align: left;
+        }  
 
     &--link {
         text-decoration: none;
@@ -91,9 +96,11 @@
 
 .address__item {
     padding: 0;
+    // text-align: center;
+
 
     &:not(:last-child) {
-        margin-bottom: 9px;
+        margin-bottom: 12px;
     }
 
 }
@@ -103,20 +110,53 @@
 }
 
 .social {
+margin: 60px auto;
+
+@media  screen and (min-width: 768px) {    
+    margin: 0 79px 0 0;
+}
+    
+@media  screen and (min-width: 1200px) {
+   
+    margin: 0;
     margin-right: auto;
+}
 }
 
 .contacts {
-    margin-right: 70px;
+    // margin: 0 auto;
 
+    @media  screen and (min-width: 768px) {
+       margin-left: 79px;
+            
+    }
+    
+    @media  screen and (min-width: 1200px){
+    margin-left: 0px;
+    text-align: left;
+    }
 }
-
+.footer__tablet {
+    @media screen and (min-width: 768px) and (max-width: 1199px){
+    margin-bottom: 60px;
+    display: flex;
+    align-items: baseline;
+    gap: 165px;
+    }
+    @media screen and (min-width: 1200px) {
+        
+        display: flex;
+        align-items: baseline;
+        gap: 94px;
+        
+                }
+}
 
 .email-footer {
     display: block;
     font-size: 16px;
     line-height: 1.25;
-    width: 358px;
+    width: 450px;
     height: 50px;
     padding: 0;
     padding: 15px 0 15px 18px;
@@ -126,16 +166,29 @@
     background-color: transparent;
         transition: $baseTransition;
 
+        @media  screen and (min-width: 1200px) {
+            width: 358px;
+            }  
+
     &:focus,
         &:hover {
             border-color: $accent-color;
         }
+
+           
 }
 
 .input-email {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
+    @media  screen and (min-width: 1200px) {
+    display: flex;
     flex-direction: row;
     gap: 12px;
+    }
 }
 
 .button.email {

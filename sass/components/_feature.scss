@@ -2,7 +2,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 270px;
+    width: auto;
     height: 120px;
     padding: 0;
     margin-bottom: 30px;
@@ -14,51 +14,54 @@
 
 
 .feature {
-    @media screen and (max-width: 480px) {
-        width: auto;
-        &__title {
-            text-align: center;
-        }
-        &__icon {
-            width: auto;
-        }
-        
-    }
+   
+    &__title {
+        margin-top: 0;
+        margin-bottom: 10px;
+        text-align: center;
 
-        @media screen and (min-width: 768px) and (max-width: 1199px) {
-                display: flex;
-                flex-wrap: wrap;
-                gap: 30px;
+        color: $title-text-color;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 1.14;
+        text-transform: uppercase;
+
+    }
+    
+    &__text {
+        min-width: auto;
+        margin-top: 0;
+        margin-bottom: 0;
+        text-align: start;
+        line-height: 1.71;
+      }
+
+  &__item {
+    display: block;
+  }
+
+//   &__item:not(:last-child) {
+//     margin-bottom: 30px;
+//     }
+
+     display: flex;
+     flex-wrap: wrap;
+     gap: 30px;
+                @media screen and (min-width: 768px) {
+            &__title {
+                text-align: start;
+                    }
+             &__item {
+                width: 354px;
+                    } 
             }
         
             @media screen and (min-width: 1200px) {
-                display: flex;
-                flex-basis: calc((100% - 3*30px)/4);
-                gap: 30px;
-            }
-        
-    &__title {
-            margin-top: 0;
-            margin-bottom: 10px;
-            text-align: start;
-    
-            color: $title-text-color;
-            font-weight: 700;
-            font-size: 14px;
-            line-height: 1.14;
-            text-transform: uppercase;
-
-
+             &__item {
+               width: 270px;
+                    }  
         }
-
-          
-  &__text {
-            margin-top: 0;
-            margin-bottom: 0;
-            text-align: start;
-            line-height: 1.71;
-          }
-}
+        }
 
 .feature--list {
     padding-left: 0;

@@ -1,8 +1,8 @@
 
 .container .project-list {
 
-    //  display: block;
-
+    
+    
     @media screen and (min-width: 768px) {
             display: flex;
             flex-wrap: wrap;
@@ -66,10 +66,18 @@
 .thumb.link {
     display: block;
     transition: $shadowTransition;
-    // transition-property: box-shadow;
-    // transition-duration: 250ms;
-    // transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
+    @media screen and (min-width: 480px) {
+        width: auto;
+        min-height: 294px;
+        margin-bottom: 30px;
+    }
+    @media screen and (min-width: 768px) {
+        // min-width: 354px;
+        margin-bottom: 0;
+    
+    }
+    
     &:hover,
     &:focus {
         box-shadow: $box-shadow;

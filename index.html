@@ -7,22 +7,21 @@
     <title>Document</title>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css">
-    
     <link rel="stylesheet" href="./css/main.min.css">
+    </head>
   
-
-  </head>
+  
     <body>
       <header >
         <div class="container container__nav">
            <a  href="./index.html" class="logo"> <span class="logo-web">Web</span><span class="logo-studio">Studio</span></a>
-          <nav>
+          
             <ul class="site-nav site-nav--list">
               <li class="site-nav__item"><a href="./index.html" class="site-nav__link site-nav__link--current">Студія</a></li>
               <li class="site-nav__item"><a href="./portfolio.html" class="site-nav__link">Портфоліо</a></li>
               <li class="site-nav__item"><a href="" class="site-nav__link">Контакти</a></li>
             </ul>
-          </nav>
+          
           <ul class="auth-nav  auth-nav--list">
               <li class="auth-nav__item">
                  <a href="mailto:info@devstudio.com" class="auth-nav__link"><svg class="button-icon-nav" width="16" height="12">
@@ -38,15 +37,14 @@
               +096 111 11 11</a>
             </li>
             </ul>
+            <button class="menu-toggle js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
+              <svg class="icon-menu" width="40" height="40">
+                <use href="./images/symbol-defs.svg#icon-menu">
+                </use>
+            </button>
        </div>
 
-      <button class="menu-toggle js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
-        <svg width="24" height="24" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-          <path fill-rule="evenodd"
-            d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-            clip-rule="evenodd"></path>
-        </svg>
-      </button>
+     
 
       </header>
       <main>
@@ -61,7 +59,7 @@
       <div class="container">
       <h2 class="visually-hidden">Переваги</h2>
       <ul class="feature feature--list">
-        <li >
+         <li class="feature__item">
           <div class="feature__icon">
           <svg class="feature__button-icon" width="70" height="70">
             <use href="./images/symbol-defs.svg#antenna">
@@ -74,7 +72,7 @@
             позиції.
           </p>
         </li>
-        <li >
+        <li class="feature__item">
           <div class="feature__icon">
             <svg class="feature__button-icon" width="70" height="70">
               <use href="./images/symbol-defs.svg#clock">
@@ -87,7 +85,7 @@
             себе.
           </p>
         </li>
-        <li >
+        <li class="feature__item"> 
         <div class="feature__icon">
           <svg class="feature__button-icon" width="70" height="70">
             <use href="./images/symbol-defs.svg#diagram">
@@ -99,7 +97,7 @@
           Так само консультація з широким активом значною мірою зумовлює.
         </p>
         </li>
-        <li >
+        <li class="feature__item">
           <div class="feature__icon">
             <svg class="feature__button-icon" width="70" height="70">
               <use href="./images/symbol-defs.svg#astronaut">
@@ -121,20 +119,57 @@
       <ul class="overlay-product overlay-product--list">
         <li>
           <div class="overlay-product__box">
-          <img src="images/img1.jpg" alt="Дисконтні додатки" width="370">
+            <picture>
+              <!-- desktop -->
+              <source
+                media="(min-width: 1200px)"
+                srcset="./images/products/product_dt@1x-1.webp 1x, ./images/products/product_dt@2x-1.webp 2x"
+                type="image/webp"
+              />
+              <source
+                media="(min-width: 1200px)"
+                srcset="./images/products/product_dt@1x-1.jpg 1x, ./images/products/product_dt@2x-1.jpg 2x"
+              />
+          <img src="images/products/product_dt@1x-1.jpg" alt="Дисконтні додатки" width="370">
+          </picture>
           <p class="overlay-product__text">ДЕСКТОПНІ ДОДАТКИ</p>
         </div>
         </li>
         <li>
           <div class="overlay-product__box">
-          <img src="images/img2.jpg" alt="Мобільні додатки" width="370">
-          <p class="overlay-product__text">МОБІЛЬНІ ДОДАТКИ</p>
+            <picture>
+              <!-- desktop -->
+              <source
+                media="(min-width: 1200px)"
+                srcset="./images/products/product_dt@1x-2.webp 1x, ./images/products/product_dt@2x-2.webp 2x"
+                type="image/webp"
+              />
+              <source
+                media="(min-width: 1200px)"
+                srcset="./images/products/product_dt@1x-2.jpg 1x, ./images/products/product_dt@2x-2.jpg 2x"
+              />
+          <img src="images/products/product_dt@1x-2.jpg" alt="Мобільні додатки" width="370">
+          
+            </picture>
+            <p class="overlay-product__text">МОБІЛЬНІ ДОДАТКИ</p>
         </div>
         </li>
         <li>
           <div class="overlay-product__box">
-          <img src="images/img3.jpg" alt="Дизайнерські рішення" width="370" >
-          <p class="overlay-product__text">ДИЗАЙНЕРСЬКІ РІШЕННЯ</p>
+            <picture>
+              <!-- desktop -->
+              <source
+                media="(min-width: 1200px)"
+                srcset="./images/products/product_dt@1x-3.webp 1x, ./images/products/product_dt@2x-3.webp 2x"
+                type="image/webp"
+              />
+              <source
+                media="(min-width: 1200px)"
+                srcset="./images/products/product_dt@1x-3.jpg 1x, ./images/products/product_dt@2x-3.jpg 2x"
+              />
+          <img src="images/products/product_dt@1x-3.jpg" alt="Дизайнерські рішення" width="370">
+           </picture>
+                    <p class="overlay-product__text">ДИЗАЙНЕРСЬКІ РІШЕННЯ</p>
         </div>
         </li>
       </ul>
@@ -145,7 +180,20 @@
         <h2 class="section__title">Наша команда</h2>
        <ul class="team team--list">
           <li class="team__card">
-          <img src="./images/photo1.jpg" alt="фото І.Дем'яненеко" width="270">
+            <img
+  srcset="
+    ./images/team/team_mb@1x.jpg 450w,
+    ./images/team/team_mb@2x.jpg 900w,
+    ./images/team/team_tb@1x.jpg 354w,
+    ./images/team/team_tb@2x.jpg 708w,
+    ./images/team/team_dt@1x.jpg 270w,
+    ./images/team/team_dt@2x.jpg 540w
+  "
+  src="./images/team/team_mb@1x.jpg"
+  sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
+  min-width="270"
+  
+   alt="фото І.Дем'яненеко" >
           <div class="team__person">
           <h3 class="team__title">Ігор Дем'яненко</h3>
           <p class="team__text">Product Designer</p>
@@ -178,7 +226,19 @@
           </div>
         </li>
           <li class="team__card">
-          <img src="./images/photo2.jpg" alt="фото О.Репіна" width="270">
+            <img
+  srcset="
+    ./images/team/team_mb@1x-1.jpg 450w,
+    ./images/team/team_mb@2x-1.jpg 900w,
+    ./images/team/team_tb@1x-1.jpg 354w,
+    ./images/team/team_tb@2x-1.jpg 708w,
+    ./images/team/team_dt@1x-1.jpg 270w,
+    ./images/team/team_dt@2x-1.jpg 540w
+  "
+  src="./images/team/team_mb@1x.jpg"
+  sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
+  min-width="270"  
+          alt="фото О.Репіна" >
           <div class="team__person">
           <h3 class="team__title">Ольга Рєпіна</h3>
           <p class="team__text">Frontend Developer</p>
@@ -211,7 +271,18 @@
           </div>
           </li>
         <li class="team__card">
-          <img src="./images/photo3.jpg" alt="фото М.Тарасов" width="270">
+          <img
+  srcset="
+    ./images/team/team_mb@1x-2.jpg 450w,
+    ./images/team/team_mb@2x-2.jpg 900w,
+    ./images/team/team_tb@1x-2.jpg 354w,
+    ./images/team/team_tb@2x-2.jpg 708w,
+    ./images/team/team_dt@1x-2.jpg 270w,
+    ./images/team/team_dt@2x-2.jpg 540w
+  "
+  src="./images/team/team_mb@1x.jpg"
+  sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
+  min-width="270"  alt="фото М.Тарасов" >
           <div class="team__person">
           <h3 class="team__title">Микола Тарасов</h3>
           <p class="team__text">Marketing</p>
@@ -244,7 +315,19 @@
           </div>
         </li>
         <li class="team__card">
-          <img src="./images/photo4.jpg" alt="фото М.Єрмаков" width="270">
+          <img
+  srcset="
+    ./images/team/team_mb@1x-3.jpg 450w,
+    ./images/team/team_mb@2x-3.jpg 900w,
+    ./images/team/team_tb@1x-3.jpg 354w,
+    ./images/team/team_tb@2x-3.jpg 708w,
+    ./images/team/team_dt@1x-3.jpg 270w,
+    ./images/team/team_dt@2x-3.jpg 540w
+  "
+  src="./images/team/team_mb@1x.jpg"
+  sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
+  min-width="270" 
+           alt="фото М.Єрмаков" >
           <div class="team__person">
           <h3 class="team__title">Михайло Єрмаков</h3>
           <p class="team__text">UI Designer</p>
@@ -337,11 +420,12 @@
     </main>
     <footer class="footer">
       <div class="footer__container container">
-     <div class="contacts">
+  <div class="footer__tablet">
+       <div class="contacts">
           <a  href="./index.html" class="logo"> <span class="logo-web">Web</span><span class="footer-logo-studio">Studio</span></a>
       <address class="address">
         <ul class="address--link address--list">
-          <li class="address__item"><a href="https://goo.gl/maps/DT5oAmegwwbtEfnw5" target="_blank" rel="noreferrer noopener" class="footer-link-address">м. Київ, пр-т Лесі Українки, 26</a></li>
+          <li class="address__item"><a href="https://goo.gl/maps/DT5oAmegwwbtEfnw5" target="_blank" rel="noreferrer noopener" class="footer-link-address">м.Київ,пр-т Лесі Українки,26</a></li>
           <li class="address__item"><a href="mailto:info@devstudio.com" class="footer-link">info@devstudio.com</a></li>
           <li class="address__item"><a href="tel:+380961111111" class="footer-link">+38 096 111 11 11 </a></li>
         </ul>
@@ -383,7 +467,8 @@
             </a>
           </li>
         </ul>
-        </div>
+<        </div>
+      </div>
         <div >
           <p class="footer__title">ПІДПИШІТЬСЯ НА РОЗСИЛКУ</p>
           <form class="input-email">
@@ -446,22 +531,27 @@
       </div>
       <div class="menu-container js-menu-container" id="mobile-menu">
         <button class="menu-toggle js-close-menu">
-          <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
-            <path fill-rule="evenodd"
-              d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-              clip-rule="evenodd"></path>
-          </svg>
+          <svg class="icon-close" width="40" height="40">
+            <use href="./images/symbol-defs.svg#icon-close">
+            </use>
         </button>
       
         <ul class="mobile-menu">
-          <li><a href="" class="link">О нас</a></li>
-          <li><a href="" class="link">Работы</a></li>
-          <li><a href="" class="link">Контакты</a></li>
-          <li><a href="" class="link">Карьера</a></li>
+          <li class="menu-link"><a href="./index.html" class="site-link site-link--current">Студія</a></li>
+          <li class="menu-link"><a href="./portfolio.html" class="site-link">Портфоліо</a></li>
+          <li class="menu-link"><a href="" class="site-link">Контакти</a></li>
          </ul>
-      </div>
-
-      <script src="./js/modal.js"></script>
+         <ul class="mobile-link">
+          <li class="menu-link"><a a href="tel:+380961111111" class="contakts-link tel">+38 096 111 11 11 </a></li>
+          <li class="menu-link"><a href="mailto:info@devstudio.com" class="contakts-link">info@devstudio.com</a></li>
+         </ul>
+         <ul class="mobile-social">
+          <li class="social-menu"><a href="" class="social-link">Instagram</a></li>
+          <li class="social-menu"><a href="" class="social-link">Twitter</a></li>
+          <li class="social-menu"><a href="" class="social-link">Fasebook</a></li>
+          <li class="social-menu"><a href="" class="social-link">Linkedln</a></li>
+         </ul>
+      </div>menu    <script src="./js/modal.js"></script>
       <script defer src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
         integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
         crossorigin="anonymous"></script>

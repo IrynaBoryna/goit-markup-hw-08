@@ -13,6 +13,9 @@
     $colorTransition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
          $iconTransition: backgraund-color, color 250ms cubic-bezier(0.4, 0, 0.2, 1);
          $fillTransition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+         $allTransition: color, background-color, box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
+
       $shadowTransition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
            $box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
