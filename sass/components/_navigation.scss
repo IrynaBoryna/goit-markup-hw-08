@@ -108,6 +108,10 @@
 &:focus {
             color: $accent-color;
 }
+
+    &--current {
+     color: $accent-color;
+ }
 }
 
 
@@ -123,10 +127,10 @@
     background-color: $accent-color;
 }
 
-.site-nav__link--current {
-    color: $accent-color;
+// .site-nav__link--current {
+//     color: $accent-color;
 
-}
+// }
 
 
 // .auth-nav {

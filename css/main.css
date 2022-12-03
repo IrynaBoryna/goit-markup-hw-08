@@ -36,7 +36,7 @@ p {
 
 img {
   display: block;
-  min-width: 100%;
+  max-width: 100%;
   height: auto;
 }
 
@@ -72,8 +72,13 @@ img {
   text-align: center;
   color: #212121;
   font-weight: 700;
-  font-size: 36px;
-  line-height: 1.16;
+  font-size: 28px;
+  line-height: 1.17;
+}
+@media screen and (min-width: 1200) {
+  .section__title {
+    font-size: 36px;
+  }
 }
 
 .visually-hidden {
@@ -229,6 +234,9 @@ img {
 .site-nav__link:hover, .site-nav__link:focus {
   color: #2196F3;
 }
+.site-nav__link--current {
+  color: #2196F3;
+}
 
 .site-nav__link--current::after {
   content: "";
@@ -240,10 +248,6 @@ img {
   height: 5px;
   border-radius: 2px;
   background-color: #2196F3;
-}
-
-.site-nav__link--current {
-  color: #2196F3;
 }
 
 .auth-nav__link {
@@ -269,14 +273,14 @@ img {
 
 .hero {
   text-align: center;
-  padding: 200px 0;
 }
 
 .hero--overlay {
   max-width: 1600px;
-  height: 600px;
+  height: 400px;
   margin-left: auto;
   margin-right: auto;
+  padding: 118px 0;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -313,15 +317,17 @@ img {
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/bg/bg_dt@2x.jpg");
   }
 }
+@media screen and (min-width: 1200px) {
+  .hero--overlay {
+    height: 600px;
+    padding: 200px 0;
+  }
+}
 
 .hero__title {
   display: block;
-  width: 360px;
+  max-width: 360px;
   margin: 0 auto 30px;
-  text-align: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   color: #FFFFFF;
   font-weight: 900;
   font-size: 26px;
@@ -329,11 +335,11 @@ img {
   letter-spacing: 0.06em;
   text-transform: uppercase;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1200px) {
   .hero__title {
     font-size: 44px;
     line-height: 1.36;
-    width: 696px;
+    min-width: 696px;
   }
 }
 
@@ -551,9 +557,10 @@ img {
   display: block;
   font-size: 16px;
   line-height: 1.25;
-  width: 450px;
+  width: 100%;
+  max-width: 450px;
   height: 50px;
-  padding: 0;
+  margin: 0 auto;
   padding: 15px 0 15px 18px;
   color: rgba(255, 255, 255, 0.3);
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -571,19 +578,6 @@ img {
   border-color: #2196F3;
 }
 
-.input-email {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 20px;
-}
 @media screen and (min-width: 1200px) {
   .input-email {
     display: -webkit-box;
@@ -612,6 +606,13 @@ img {
   height: 50px;
   padding: 10px 28px;
   border: none;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+@media screen and (min-width: 1200px) {
+  .button.email {
+    margin-top: 0;
+  }
 }
 
 .buttons.list {
@@ -682,7 +683,6 @@ img {
   top: 50%;
   left: 50%;
   width: 450px;
-  min-height: 581px;
   padding: 40px;
   border-radius: 4px;
   background-color: #ffffff;
@@ -693,9 +693,19 @@ img {
   transition: transform 300ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: transform 300ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 300ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+@media screen and (max-width: 1199px) {
+  .modal {
+    width: 95%;
+    max-width: 450px;
+    height: 95%;
+    max-height: 609px;
+    overflow: scroll;
+  }
+}
 @media screen and (min-width: 1200px) {
   .modal {
     width: 528px;
+    height: 581px;
   }
 }
 
@@ -1097,6 +1107,9 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   gap: 30px;
@@ -1117,7 +1130,7 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 210px;
+  min-width: 210px;
   height: 92px;
   padding: 0;
   background-color: #ffffff;
@@ -1132,12 +1145,12 @@ img {
 }
 @media screen and (min-width: 768px) {
   .clients__client {
-    width: 226px;
+    min-width: 226px;
   }
 }
 @media screen and (min-width: 1200px) {
   .clients__client {
-    width: 170px;
+    min-width: 170px;
   }
 }
 
@@ -1183,7 +1196,7 @@ img {
 
 .card-portfolio {
   text-align: left;
-  height: 110px;
+  min-height: 110px;
   padding: 20px 24px 20px 24px;
   border-bottom: 1px solid #EEEEEE;
   border-right: 1px solid #EEEEEE;
@@ -1249,7 +1262,6 @@ img {
   padding: 0;
   margin: 0;
   list-style: none;
-  position: relative;
 }
 
 @media (min-width: 768px) {
@@ -1263,6 +1275,23 @@ img {
   padding: 0;
   margin: 0;
   list-style: none;
+}
+
+.mobile-menu {
+  margin-bottom: 306px;
+}
+
+.mobile-social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.mobile-link {
+  display: block;
+  margin-bottom: 64px;
 }
 
 .menu .link,
@@ -1290,7 +1319,7 @@ img {
 }
 .social-menu:not(:last-child) {
   padding-right: 10px;
-  border-right: 1px solid #2196F3;
+  border-right: 1px solid rgba(33, 33, 33, 0.2);
 }
 .social-menu:not(:first-child) {
   padding-left: 10px;
@@ -1310,22 +1339,6 @@ img {
   margin-bottom: 32px;
 }
 
-.mobile-social {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  position: absolute;
-  bottom: 48px;
-  left: 40px;
-}
-
-.mobile-link {
-  display: block;
-  position: absolute;
-  bottom: 134px;
-  left: 40px;
-}
-
 .site-link {
   font-size: 40px;
   font-weight: 500;
@@ -1334,6 +1347,9 @@ img {
   margin-bottom: 30px;
 }
 .site-link:hover, .site-link:focus {
+  color: #2196F3;
+}
+.site-link--current {
   color: #2196F3;
 }
 
@@ -1374,17 +1390,8 @@ img {
 }
 
 .menu-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: stretch;
-      -ms-flex-align: stretch;
-          align-items: stretch;
   position: fixed;
+  overflow: scroll;
   top: 0;
   left: 0;
   width: 100vw;

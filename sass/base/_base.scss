@@ -34,7 +34,7 @@ p {
 
 img {
     display: block;
-    min-width: 100%;
+    max-width: 100%;
     height: auto;
 }
 
@@ -70,10 +70,15 @@ img {
     text-align: center;
 
     color: $title-text-color;
-
     font-weight: 700;
-    font-size: 36px;
-    line-height: 1.16;
+    font-size: 28px;
+    line-height: 1.17;
+
+
+    @media screen  and (min-width: 1200) {
+            font-size: 36px;
+    }
+    
 }
 .visually-hidden {
     position: absolute;

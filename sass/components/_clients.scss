@@ -7,8 +7,10 @@
     }
 
     display: flex;
-    flex-wrap: wrap;;
+    justify-content: center;
+    flex-wrap: wrap;
     gap: 30px;
+    
 
     
     // @media screen and (min-width: 768px) {
@@ -32,7 +34,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 210px;
+    min-width: 210px;
     height: 92px;
     padding: 0;
     background-color: #ffffff;
@@ -50,10 +52,10 @@
 
 }
 @media screen and (min-width: 768px) {
-    width: 226px; }
+    min-width: 226px; }
 
     @media screen and (min-width: 1200px) {
-        width: 170px; }
+        min-width: 170px; }
     
 }
 
