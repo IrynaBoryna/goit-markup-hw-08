@@ -36,6 +36,7 @@ img {
     display: block;
     max-width: 100%;
     height: auto;
+    
 }
 
 .addres {
@@ -75,7 +76,7 @@ img {
     line-height: 1.17;
 
 
-    @media screen  and (min-width: 1200) {
+    @media screen  and (min-width: 1200px) {
             font-size: 36px;
     }
     

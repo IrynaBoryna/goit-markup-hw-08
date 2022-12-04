@@ -3,14 +3,18 @@
     background-color: #2f303a;
 
     display: block;
-    text-align: center;
-
+    
+    @media  screen and (max-width: 767px) {
+        text-align: center; 
+    }
         @media  screen and (min-width: 1200px) {
         
         &__container {
             display: flex;
             align-items: baseline;
             gap: 94px;
+            
+
         }
     }
 }
@@ -53,6 +57,7 @@
     color: #ffffff;
     font-style: normal;
     margin-bottom: 20px;
+    text-align: center;
 
 }
 
@@ -71,8 +76,7 @@
 }
 
 .address {
-    // display: flex;
-    width: auto;
+        width: auto;
     padding: 0;
     margin: 0;
     margin-top: 28px;
@@ -140,8 +144,9 @@ margin: 60px auto;
     @media screen and (min-width: 768px) and (max-width: 1199px){
     margin-bottom: 60px;
     display: flex;
-    align-items: baseline;
-    gap: 165px;
+    // align-items: baseline;
+justify-content: space-between;
+    // gap: 165px;
     }
     @media screen and (min-width: 1200px) {
         
